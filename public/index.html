@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ff3d71">
+  <meta name="description" content="Vibe — compartilhe o que acontece de verdade.">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Vibe</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-view="feed" aria-label="Ir ao início">vibe<span>✦</span></button>
+      <div class="top-actions"><button id="install" class="icon-button" hidden title="Instalar aplicativo">↓</button><button class="icon-button" data-view="new" title="Criar publicação">＋</button></div>
+    </header>
+    <main>
+      <section id="feedView" class="view active" aria-label="Feed público">
+        <div class="stories" id="stories"></div>
+        <div class="feed-head"><div><p class="eyebrow">PARA VOCÊ</p><h1>Últimas vibrações</h1></div><button class="refresh" id="refreshFeed">↻ Atualizar</button></div>
+        <div id="feed" class="feed"><div class="loading">Carregando publicações…</div></div>
+      </section>
+      <section id="newView" class="view compose" aria-label="Nova publicação">
+        <button class="back" data-view="feed">← Voltar</button>
+        <p class="eyebrow">NOVA PUBLICAÇÃO</p><h1>Mostre sua vibe</h1><p class="muted">O feed é público. Publique só o que você quer compartilhar.</p>
+        <form id="postForm">
+          <label class="upload-box" for="imageInput"><input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp" hidden><span id="uploadPreview"><b>＋</b><em>Adicionar foto</em><small>JPG, PNG ou WEBP · até 3 MB</small></span></label>
+          <label>Seu nome<input id="author" maxlength="32" autocomplete="name" placeholder="Como você quer aparecer?"></label>
+          <label>Seu @<input id="handle" maxlength="32" autocapitalize="none" placeholder="seu.usuario"></label>
+          <label>Legenda<textarea id="caption" maxlength="1200" required placeholder="O que está acontecendo?"></textarea><small class="count"><span id="captionCount">0</span>/1200</small></label>
+          <button class="publish" type="submit">Publicar no Vibe <span>→</span></button>
+          <p id="formMessage" class="form-message" role="status"></p>
+        </form>
+      </section>
+      <section id="profileView" class="view profile" aria-label="Seu perfil">
+        <div class="profile-cover"></div><div class="profile-info"><div class="avatar large" id="profileAvatar">V</div><button class="edit-profile" data-view="new">Criar post</button><h1 id="profileName">Você no Vibe</h1><p id="profileHandle">@vibe.user</p><p class="bio">Sua coleção de momentos, ideias e pequenas grandes coisas.</p><div class="stats"><span><b id="postCount">0</b> posts</span><span><b>0</b> seguidores</span><span><b>0</b> seguindo</span></div></div><div id="profilePosts" class="profile-grid"></div>
+      </section>
+    </main>
+    <nav class="bottom-nav" aria-label="Navegação principal"><button class="nav-item selected" data-view="feed"><i>⌂</i><span>Início</span></button><button class="nav-item" data-view="new"><i>＋</i><span>Criar</span></button><button class="nav-item" data-view="profile"><i>◉</i><span>Perfil</span></button></nav>
+  </div>
+  <dialog id="commentsDialog"><div class="dialog-head"><b>Comentários</b><button id="closeComments" class="icon-button">×</button></div><div id="commentsList" class="comments-list"></div><form id="commentForm" class="comment-form"><input id="commentInput" maxlength="300" placeholder="Escreva um comentário…"><button>Enviar</button></form></dialog>
+  <template id="postTemplate"><article class="post"><header class="post-meta"><div class="avatar"></div><div><b class="post-author"></b><small class="post-handle"></small></div><button class="more" aria-label="Mais opções">•••</button></header><div class="post-image-wrap"><img class="post-image" alt="Foto publicada no Vibe"><div class="no-photo">✦<span>Uma ideia também pode virar post.</span></div></div><div class="post-content"><div class="post-actions"><button class="like" aria-label="Curtir">♡ <b></b></button><button class="comment" aria-label="Comentar">◌ <b></b></button><button class="share" aria-label="Compartilhar">↗</button></div><p class="post-caption"></p><small class="post-time"></small></div></article></template>
+  <script src="/app.js"></script>
+</body>
+</html>
