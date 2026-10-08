@@ -1,0 +1,31 @@
+[
+  {
+    "id": "bem-vindo",
+    "author": "Vurb",
+    "handle": "vurb.app",
+    "avatar": "V",
+    "caption": "Bem-vindo ao **Vibe**. Uma rede feita para compartilhar o que acontece de verdade por aí. Poste a sua primeira foto. ✦",
+    "image": "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=85",
+    "createdAt": "2026-10-08T15:20:00-03:00",
+    "likes": 128,
+    "liked": false,
+    "comments": [
+      {
+        "author": "ana.lima",
+        "text": "Que ideia boa!"
+      }
+    ]
+  },
+  {
+    "id": "cidade",
+    "author": "Marina Costa",
+    "handle": "marinacosta",
+    "avatar": "M",
+    "caption": "Fim de tarde do jeito certo. Recife sempre entrega. 🌅",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85",
+    "createdAt": "2026-10-08T14:30:00-03:00",
+    "likes": 46,
+    "liked": false,
+    "comments": []
+  }
+]
