@@ -1,0 +1,7 @@
+{
+  "name": "central-de-agentes-wanssu",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {"start": "node server.js", "test": "node --test"},
+  "engines": {"node": ">=18"}
+}
