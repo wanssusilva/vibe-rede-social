@@ -1,0 +1,10 @@
+{
+  "name": "Vibe — rede social",
+  "short_name": "Vibe",
+  "description": "Compartilhe fotos, ideias e momentos em uma rede social pública.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff3d71",
+  "icons": [{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
