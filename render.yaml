@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: vibe-rede-social
+    runtime: node
+    plan: free
+    buildCommand: ""
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22
